@@ -10,14 +10,15 @@ Official PyTorch implementation of **"ACSG: Adversarial Camouflage with Structur
 ## Abstract
 Monocular depth estimation (MDE) is widely used in autonomous driving, yet is vulnerable to real-world physical adversarial perturbations. However, physical adversarial camouflage against MDE remains largely underexplored. Existing methods, which typically optimize textures in UV space or from random initialization, exhibit limited effectiveness in perturbing depth predictions due to the lack of intrinsic spectral and topological structural guidance. To address these limitations, we propose Adversarial Camouflage With Structural Guidance (ACSG). Designed to disrupt the geometric cues relied upon by MDE, ACSG leverages toroidal Fourier positional encoding to generate multi-scale structured adversarial textures with topological continuity. These textures are applied via a Hybrid UV-Triplanar Mapping scheme to enable geometry-agnostic deployment while strictly preserving non-modifiable regions. Additionally, a Physical Effect Simulation module is integrated to ensure robustness against real-world environmental dynamics. Extensive simulation experiments demonstrate that ACSG outperforms existing methods across diverse weather conditions, vehicle and obstacle types, camera viewpoints, and perception tasks. Furthermore, real-world experiments confirm its physical realizability, inducing average depth deviations exceeding 20m indoors and 15m outdoors.
 ## Framework
-![image-framework](https://github.com/Gandolfczjh/3D2Fool/blob/main/framework.png)
+![image-framework](https://github.com/Gandolfczjh/3D2Fool/blob/main/framework.jpg)
 
 ## Installation
 ```bash
 conda create -n acsg python=3.9
 conda activate acsg
-
 pip install -r requirements.txt
+
+## 
 python train.py
 ```
 * data_loader_mde.py
